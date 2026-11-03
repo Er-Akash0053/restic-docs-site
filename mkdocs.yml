@@ -1,0 +1,80 @@
+site_name: Restic Documentation & Storage Architecture
+site_description: Topic-based technical documentation for Restic secure backup program, covering architecture concepts, task procedures, CLI reference, and release notes.
+site_author: Portfolio Writing Sample
+site_url: https://your-username.github.io/restic-docs-site/
+
+repo_name: technical-writing-portfolio/restic-docs-site
+repo_url: https://github.com/your-username/restic-docs-site
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/custom.css
+
+nav:
+  - Overview: index.md
+  - Concepts:
+      - Repository Architecture: concepts/architecture.md
+      - Deduplication Mechanics: concepts/deduplication.md
+      - Retention & Pruning Lifecycle: concepts/retention-and-pruning.md
+  - Tasks:
+      - Initialize a Repository: tasks/initialize-repository.md
+      - Create Backups: tasks/create-backups.md
+      - Verify Repository Integrity: tasks/verify-integrity.md
+      - Restore Data: tasks/restore-data.md
+      - Prune & Enforce Retention: tasks/prune-snapshots.md
+  - Reference:
+      - CLI Command Cheat Sheet: reference/cli-cheat-sheet.md
+      - Error Codes & Troubleshooting: reference/error-troubleshooting.md
+  - Release Notes:
+      - v0.17.0 Release Notes: release-notes/v0-17-0.md
