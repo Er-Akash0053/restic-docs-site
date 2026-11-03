@@ -1,10 +1,10 @@
 site_name: Restic Documentation & Storage Architecture
 site_description: Topic-based technical documentation for Restic secure backup program, covering architecture concepts, task procedures, CLI reference, and release notes.
 site_author: Portfolio Writing Sample
-site_url: https://your-username.github.io/restic-docs-site/
+site_url: https://Er-Akash0053.github.io/restic-docs-site/
 
-repo_name: technical-writing-portfolio/restic-docs-site
-repo_url: https://github.com/your-username/restic-docs-site
+repo_name: Er-Akash0053/restic-docs-site
+repo_url: https://github.com/Er-Akash0053/restic-docs-site
 edit_uri: edit/main/docs/
 
 theme:
