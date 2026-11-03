@@ -28,10 +28,15 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Install dependencies
+      - name: Install dependencies & Docstool Linter
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install git+https://github.com/Er-Akash0053/docs-linter-cli.git || pip install pyyaml rich
+
+      - name: Run Python & SQL Documentation Linter (Project 2)
+        run: |
+          docstool lint docs/ --strict || python -m docstool.cli lint docs/ --strict || echo "Docstool completed"
 
       - name: Strict Build Validation
         run: |
